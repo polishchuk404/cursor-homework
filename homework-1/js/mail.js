@@ -4,12 +4,13 @@ let price = {
     banana: 123.965,
     pineapple: 90.2345
 };
-let sum = price.apple + price.banana + price.pineapple;
+let {apple, banana, pineapple} = price;
+let sum = apple + banana + pineapple;
 let sumMedium = sum/3;
 let randomValue = Math.random();
 document.writeln(`
-    <p>Максимальна ціна ${Math.max(price.apple, price.banana, price.pineapple)}${CURRENCY}</p>
-    <p>Мінімальна ціна ${Math.min(price.apple, price.banana, price.pineapple)}${CURRENCY}</p>
+    <p>Максимальна ціна ${Math.max(apple, banana, pineapple)}${CURRENCY}</p>
+    <p>Мінімальна ціна ${Math.min(apple, banana, pineapple)}${CURRENCY}</p>
     <p>Сума всіх товарів ${sum}${CURRENCY}</p>
     <p>Сума всіх товарів ${Math.floor(sum)}${CURRENCY} (Заокруглення в меншу сторону)</p>
     <p>Сума всіх товарів ${Math.round(sum/100)*100}${CURRENCY} (Заокруглення до сотень)</p>
