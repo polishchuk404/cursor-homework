@@ -1,10 +1,11 @@
-let N = NaN;
-while (isNaN(N)){
-    N = Math.round(+prompt(`Enter the number "N"`, ``));
-}
-let M = NaN;
-while (isNaN(M)){
+let N = null;
+do {
+  N = Math.round(+prompt(`Enter the number "N"`, ``));
+} while (isNaN(N) || N == 0);
+let M = null;
+do {
     M = Math.round(+prompt(`Enter the number "M"`, ``));
+} while (isNaN(M) || M <= N){
 }
 let skipEven = confirm("Skip even numbers?");
 let sum = 0;
@@ -21,4 +22,6 @@ document.writeln(`
     <p>M = ${M}</p>
     <p>Skip even numbers - ${skipEven}</p>
     <p>${sum}</p>  
-`)
+`);
+
+
