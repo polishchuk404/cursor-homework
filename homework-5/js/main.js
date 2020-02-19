@@ -16,13 +16,12 @@ function getAverage(numbers){
 
 // 4
 function getMedian(numbers){
-    let median = 0;
-    let = numsLen = numbers.length;
-    numbers.sort();
-    if (numsLen % 2 === 0){
-        median = (numbers[numsLen / 2 - 1] + numbers[numsLen / 2]) / 2;
-    } else {
-        median = numbers[(numsLen - 1) / 2];
+    numbers.sort((a,b) =>  a - b);
+    if (numbers.length % 2 == 1 ){
+        median = numbers[Math.floor(numbers.length/2)];       
+    }
+    else {
+        median = ((numbers[numbers.length/2] + numbers[numbers.length/2-1])/2);
     }
     return median;
 }
