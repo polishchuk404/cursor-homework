@@ -11,17 +11,19 @@ function getRandomArray(length, min, max){
 
 // 3
 function getAverage(numbers){
-    return numbers.reduce((a, b) => a + b, 0)/numbers.length;
+    result = numbers.filter(value => (parseFloat(value) - parseInt(value) === 0));
+    return (result.reduce((a, b) => a + b, 0)/result.length).toFixed(2);
 }
 
 // 4
 function getMedian(numbers){
-    numbers.sort((a,b) =>  a - b);
-    if (numbers.length % 2 == 1 ){
-        median = numbers[Math.floor(numbers.length/2)];       
+    numbersFilt = numbers.filter(value => (parseFloat(value) - parseInt(value) === 0));
+    numbersFilt.sort((a,b) =>  a - b);
+    if (numbersFilt.length % 2 == 1 ){
+        median = numbersFilt[Math.floor(numbersFilt.length/2)];       
     }
     else {
-        median = ((numbers[numbers.length/2] + numbers[numbers.length/2-1])/2);
+        median = ((numbersFilt[numbersFilt.length/2] + numbersFilt[numbersFilt.length/2-1])/2);
     }
     return median;
 }
