@@ -27,7 +27,7 @@ const students = [{
 // 1
 function getSubjects(student){
     let result = [];
-    Object.keys(student.subjects).forEach(value => result.push(value[0].toUpperCase() + value.slice(1,value.length)));
+    Object.keys(student.subjects).forEach(value => result.push(value[0].toUpperCase() + value.slice(1,value.length).replace("_", " ")));
     return  result.join(", ");
 }
 // 2
