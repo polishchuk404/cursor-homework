@@ -13,4 +13,4 @@ async function getRandomChinese(length){
   } 
   return console.log(str.join(""));   
 } 
-getRandomChinese(4).then();
+getRandomChinese(4);
