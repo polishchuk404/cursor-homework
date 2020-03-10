@@ -12,7 +12,7 @@ class Student {
     return this.marks;
   }
   setMarksNew(mark){
-    this.marks.push(mark);
+    this.marks = [...this.marks, mark];
     return this.marks;
   }
   getAverageMark(){
