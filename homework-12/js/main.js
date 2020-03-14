@@ -67,10 +67,9 @@ document.getElementById('next').addEventListener('click', () => {
   document.getElementById('next').value = page; 
   renderPlanets(page);
 }); 
-document.getElementById('prev').addEventListener('click', () => {
-  let page = parseFloat(document.getElementById('prev').value);
-  page -= 1;
-  document.getElementById('prev').value = page; 
-  renderPlanets(page);
-}); 
-
+// document.getElementById('prev').addEventListener('click', () => {
+//   let page = parseFloat(document.getElementById('prev').value);
+//   page -= 1;
+//   document.getElementById('prev').value = page; 
+//   renderPlanets(page);
+// }); 
