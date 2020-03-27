@@ -11,7 +11,7 @@ const getSymbol = () => {
 async function getRandomChinese(length, time){
   let str = [];
   while(str.length < length){
-    str.push(await getSymbol());
+    str = [...str, await getSymbol()];
     await delay(time);
   } 
   return console.log(str.join(""));   
